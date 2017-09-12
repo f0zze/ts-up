@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {observable, computed} from 'mobx';
 import {observer} from 'mobx-react';
 import {Row, Col} from 'react-flexbox-grid';
@@ -6,10 +6,11 @@ import ListItem from './ListItem';
 
 @observer
 class List extends React.Component {
+    input: any
 
     @computed
     get itemLen() {
-        return this.items.length;
+        return this.items.length+10;
     }
 
     @observable items = [];

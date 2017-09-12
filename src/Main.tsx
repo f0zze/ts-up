@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import DevTools from 'mobx-react-devtools';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'theming';

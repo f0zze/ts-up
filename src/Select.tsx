@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const Select = ({ value, onValueChange, options }) =>
     <select value={value} onChange={event => onValueChange(event.target.value)}>
@@ -8,11 +8,5 @@ const Select = ({ value, onValueChange, options }) =>
             </option>
         )}
     </select>;
-
-Select.propTypes = {
-    value: React.PropTypes.string.isRequired,
-    onValueChange: React.PropTypes.func.isRequired,
-    options: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
-};
 
 export default Select;

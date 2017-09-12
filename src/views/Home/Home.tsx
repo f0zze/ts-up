@@ -1,12 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 import styled from 'emotion/react';
 import { withState } from 'recompose';
 import { H1, H2 } from '../../emotion/typography';
 
 import Select from '../../Select';
 import Ball from '../../Ball';
-import Cat from '../../components/Cat';
+import Cat from '../../components/Cat/index';
 import { ellipsis } from '../../emotion/mixins';
 
 const Description = styled(H2)`
@@ -35,11 +34,6 @@ const Home = props => {
             <Ball speed="3s" />
         </div>
     );
-};
-
-Home.propTypes = {
-    color: PropTypes.string.isRequired,
-    setColor: PropTypes.func.isRequired
 };
 
 export default withState('color', 'setColor', 'violet')(Home);

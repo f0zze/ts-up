@@ -12,7 +12,7 @@ module.exports = env => {
     return {
         context: resolve('src'),
         entry: {
-            app: './index.jsx',
+            app: './index.tsx',
             vendor: ['react-dom', 'react', 'emotion', 'recompose', 'lodash', 'react-router-dom']
         },
         output: {
@@ -35,18 +35,17 @@ module.exports = env => {
         module: {
             rules: [
                 {
-                    enforce: 'pre',
-                    test: /\.jsx?$/,
-                    loader: 'eslint-loader',
-                    exclude: /node_modules/
-                },
-                {
                     test: /\.css$/,
                     include: [/src/, /flexboxgrid/],
                     loader: ExtractTextPlugin.extract({
                         fallback: 'style-loader',
                         use: 'css-loader'
                     })
+                },
+                {
+                    test: /\.tsx?$/,
+                    exclude: /node_modules/,
+                    loader: 'babel-loader!ts-loader'
                 },
                 {
                     test: /\.jsx?$/,
