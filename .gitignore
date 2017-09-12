@@ -1,0 +1,7 @@
+#dist
+app
+# idea
+.idea
+
+# dependencies
+node_modules
