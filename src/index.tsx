@@ -11,11 +11,10 @@ const root = document.getElementById('app');
 
 if (process.env.NODE_ENV === 'development') {
     try {
-        ReactDOM.render(<Main/>, root);
+        ReactDOM.render(<Main />, root);
     } catch (e) {
-        ReactDOM.render(<RedBox error={e}/>, root);
+        ReactDOM.render(<RedBox error={e} />, root);
     }
 } else {
-    ReactDOM.render(<Main/>, root);
+    ReactDOM.render(<Main />, root);
 }
-

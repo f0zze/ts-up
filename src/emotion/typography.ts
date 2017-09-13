@@ -1,4 +1,4 @@
-import  styled from 'emotion/react';
+import styled from 'emotion/react';
 import { withTheme } from 'theming';
 
 export const H1 = withTheme(styled.h1`

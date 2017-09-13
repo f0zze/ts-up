@@ -1,13 +1,13 @@
-const {resolve} = require('path');
+const { resolve } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin');
-const {getIfUtils, removeEmpty} = require('webpack-config-utils');
+const { getIfUtils, removeEmpty } = require('webpack-config-utils');
 
 module.exports = env => {
-    const {ifProd} = getIfUtils(env);
+    const { ifProd } = getIfUtils(env);
 
     return {
         context: resolve('src'),
@@ -34,6 +34,11 @@ module.exports = env => {
         },
         module: {
             rules: [
+                {
+                    test: /\.tsx?$/,
+                    enforce: 'pre',
+                    loader: 'tslint-loader'
+                },
                 {
                     test: /\.css$/,
                     include: [/src/, /flexboxgrid/],

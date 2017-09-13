@@ -1,19 +1,19 @@
 import * as React from 'react';
-import {observable, computed} from 'mobx';
-import {observer} from 'mobx-react';
-import {Row, Col} from 'react-flexbox-grid';
+import { observable, computed } from 'mobx';
+import { observer } from 'mobx-react';
+import { Row, Col } from 'react-flexbox-grid';
 import ListItem from './ListItem';
 
 @observer
 class List extends React.Component {
-    input: any
+    @observable items = [];
+
+    private input: any;
 
     @computed
     get itemLen() {
-        return this.items.length+10;
+        return this.items.length + 10;
     }
-
-    @observable items = [];
 
     handleSubmit = e => {
         e.preventDefault();
