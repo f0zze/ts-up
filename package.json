@@ -19,7 +19,8 @@
     "react",
     "react-router",
     "recompose",
-    "emotion"
+    "emotionJS",
+    "typescript"
   ],
   "author": "Aigars Beinarovics",
   "license": "ISC",
