@@ -22,7 +22,7 @@
     "emotionJS",
     "typescript"
   ],
-  "author": "Aigars Beinarovics",
+  "author": "Aigars Beinarovics,Arthur Pumpa",
   "license": "ISC",
   "dependencies": {
     "emotion": "^7.2.0",
