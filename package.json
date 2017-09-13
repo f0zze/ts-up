@@ -4,7 +4,7 @@
   "description": "Simple Starter kit [webpack,react,react-router,recompose,lodash,emotion]",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint **/*.{js,jsx} --quiet",
+    "lint": "tslint src/**/*.{ts,tsx}",
     "format": "prettier --write --list-different --single-quote --tab-width=4 --print-width=120 webpack.config.js \"src/**/*.{js,jsx,ts,tsx}\"",
     "debug": "node-nightly --inspect --debug-brk node_modules/.bin/webpack --env.debug",
     "debug:dev": "npm run debug -- --env.dev",
