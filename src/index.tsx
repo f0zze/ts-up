@@ -1,20 +1,38 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import RedBox from 'redbox-react';
+import { useStrict } from 'mobx';
+import { Provider } from 'mobx-react';
 
 import Main from './Main';
 
 import './emotion/fonts';
 import './emotion/globals';
 
+useStrict(true);
+
+import { HomeStore, STORE_HOME } from './views/Home/homeStore';
+
+const store = {
+    [STORE_HOME]: new HomeStore()
+};
+
 const root = document.getElementById('app');
 
 if (process.env.NODE_ENV === 'development') {
     try {
-        ReactDOM.render(<Main />, root);
+        render(<MainContainer />, root);
     } catch (e) {
-        ReactDOM.render(<RedBox error={e} />, root);
+        render(<RedBox error={e} />, root);
     }
 } else {
-    ReactDOM.render(<Main />, root);
+    render(<MainContainer />, root);
+}
+
+function MainContainer() {
+    return (
+        <Provider {...store}>
+            <Main />
+        </Provider>
+    );
 }
