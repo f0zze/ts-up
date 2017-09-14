@@ -1,17 +1,17 @@
-import {inject, observer} from 'mobx-react';
+import { inject, observer } from 'mobx-react';
 import * as React from 'react';
 
 import Ball from '../../Ball';
 import Cat from '../../components/Cat';
-import {ellipsis} from '../../emotion/mixins';
+import { ellipsis } from '../../emotion/mixins';
 
 import styled from 'emotion/react';
-import {withState} from 'recompose';
+import { withState } from 'recompose';
 
-import {H1, H2} from '../../emotion/typography';
+import { H1, H2 } from '../../emotion/typography';
 import Select from '../../Select';
 
-import {IHomeStoreProps, STORE_HOME} from './homeStore';
+import { IHomeStoreProps, STORE_HOME } from './homeStore';
 
 const Description = styled(H2)`
     composes: ${ellipsis};
@@ -46,24 +46,22 @@ class Home extends React.Component<IProps> {
                 <H1>
                     {this.props.homeStore.title}
                 </H1>
-                <br/>
+                <br />
                 <Description color="grey">
                     There sits the only king I mean to bend my knee to: the King in the North!
                 </Description>
-                <br/>
+                <br />
                 <Cat />
-                <Ball speed="2s"/>
-                <Ball speed="4s"/>
-                <Ball speed="3s"/>
+                <Ball speed="2s" />
+                <Ball speed="4s" />
+                <Ball speed="3s" />
             </div>
         );
     }
 
     private changeTitle = event => {
-        this.props.homeStore.updateTitle(this.titleInput.value)
+        this.props.homeStore.updateTitle(this.titleInput.value);
     };
-
-
 }
 
 export default withState('color', 'setColor', 'violet')(Home);

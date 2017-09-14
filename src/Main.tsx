@@ -6,6 +6,7 @@ import { ThemeProvider } from 'theming';
 import Home from './views/Home';
 import List from './views/List';
 import ItemDetails from './views/ItemDetails';
+import Recipe from './views/Recipe';
 
 class Main extends React.Component {
     getRouter = () =>
@@ -13,6 +14,7 @@ class Main extends React.Component {
             <Route exact path="/" component={Home} />
             <Route path="/list" component={List} />
             <Route path="/list/:id" component={ItemDetails} />
+            <Route path="/form" component={Recipe} />
         </Switch>;
 
     getMobxDevTools = () => {
