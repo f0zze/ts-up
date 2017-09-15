@@ -17,6 +17,6 @@
   "plugins": [
     "transform-decorators-legacy",
     "transform-class-properties",
-    ["emotion", { "extractStatic": true }]
+    ["emotion", { "extractStatic": false }]
   ]
 }

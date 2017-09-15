@@ -1,6 +1,6 @@
 import { injectGlobal } from 'emotion';
 
-// eslint-disable-next-line no-unused-expressions
+// tslint:disable-next-line
 injectGlobal`
   * {
     box-sizing: border-box;

@@ -5,7 +5,11 @@ const fields = [
         name: 'title',
         label: 'Title',
         placeholder: 'Recipe title...',
-        value: ''
+    },
+    {
+        name: 'description',
+        label: 'Description',
+        placeholder: 'type anything...',
     }
 ];
 

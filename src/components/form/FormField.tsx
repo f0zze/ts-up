@@ -3,7 +3,8 @@ import { observer } from 'mobx-react';
 import { css } from 'emotion';
 
 const cssField = css`
-  display: inline-block;
+    display: block;
+    color:white;
 `;
 
 interface IProps {
