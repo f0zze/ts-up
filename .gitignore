@@ -6,3 +6,5 @@ app
 # dependencies
 node_modules
 scripts
+
+**/*.css
