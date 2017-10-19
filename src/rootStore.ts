@@ -1,12 +1,8 @@
-import {types} from 'mobx-state-tree';
+import { types } from 'mobx-state-tree';
 import UserModel from './views/User/UserModel';
 
-interface IApplicationStore  {
-
-}
+interface IApplicationStore {}
 
 const store = types.model({
     user: types.reference(UserModel)
 });
-
-

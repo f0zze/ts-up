@@ -7,15 +7,17 @@ import Home from './views/Home';
 import List from './views/List';
 import ItemDetails from './views/ItemDetails';
 import Recipe from './views/Recipe';
+import theme from './theme';
 
 class Main extends React.Component {
-    getRouter = () =>
+    getRouter = () => (
         <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/list" component={List} />
             <Route path="/list/:id" component={ItemDetails} />
             <Route path="/form" component={Recipe} />
-        </Switch>;
+        </Switch>
+    );
 
     getMobxDevTools = () => {
         return process.env.NODE_ENV === 'development' ? <DevTools /> : null;
@@ -25,10 +27,8 @@ class Main extends React.Component {
         return (
             <div>
                 {this.getMobxDevTools()}
-                <ThemeProvider theme={{ primaryColor: 'red' }}>
-                    <BrowserRouter>
-                        {this.getRouter()}
-                    </BrowserRouter>
+                <ThemeProvider theme={theme}>
+                    <BrowserRouter>{this.getRouter()}</BrowserRouter>
                 </ThemeProvider>
             </div>
         );

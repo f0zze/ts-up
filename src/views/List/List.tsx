@@ -34,18 +34,14 @@ class List extends React.Component {
                             />
                         </form>
                     </Col>
-                    <Col>
-                        {this.itemLen}
-                    </Col>
+                    <Col>{this.itemLen}</Col>
                 </Row>
                 <Row>
-                    {this.items.map(item =>
+                    {this.items.map(item => (
                         <Col md={3}>
-                            <ListItem>
-                                {item}
-                            </ListItem>
+                            <ListItem>{item}</ListItem>
                         </Col>
-                    )}
+                    ))}
                 </Row>
             </div>
         );

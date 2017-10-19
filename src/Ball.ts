@@ -1,21 +1,19 @@
-import styled, {ThemedReactEmotionInterface} from 'react-emotion';
-import {withTheme} from 'theming';
-import {bounce} from './emotion/animations';
-import {ComponentClass} from 'react';
+import { withTheme } from 'theming';
+import { bounce } from './emotion/animations';
+import styled from 'react-emotion';
+import { Theme } from './theme';
 
-interface ITest {
+interface ITest extends Theme {
     speed: string;
 }
 
-const sdiv = styled as ThemedReactEmotionInterface<ITest>
-
-const Ball = withTheme(sdiv.div`
+const Ball = styled<ITest, 'div'>('div')`
     display: inline-block;
     width: 30px;
     height: 30px;
-    animation: ${bounce} ${props => props.theme.speed} ease infinite;
+    animation: ${bounce} ${props => props.speed} ease infinite;
     background-color: ${props => (props.theme && props.theme.primaryColor) || 'red'};
     border-radius: 15px;
-`);
+`;
 
-export default Ball as ComponentClass<{ speed: string }>;
+export default withTheme<'div', ITest>(Ball);

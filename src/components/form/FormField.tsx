@@ -4,7 +4,7 @@ import { css } from 'emotion';
 
 const cssField = css`
     display: block;
-    color:white;
+    color: white;
 `;
 
 interface IProps {
@@ -19,9 +19,7 @@ class FormField extends React.Component<IProps> {
         const fieldProps = this.props.field.bind();
         return (
             <div className={cssField}>
-                <label htmlFor={fieldProps.id}>
-                    {fieldProps.label}
-                </label>
+                <label htmlFor={fieldProps.id}>{fieldProps.label}</label>
                 {React.cloneElement(this.props.children, { ...fieldProps })}
             </div>
         );

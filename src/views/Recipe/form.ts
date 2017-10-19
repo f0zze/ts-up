@@ -4,12 +4,12 @@ const fields = [
     {
         name: 'title',
         label: 'Title',
-        placeholder: 'Recipe title...',
+        placeholder: 'Recipe title...'
     },
     {
         name: 'description',
         label: 'Description',
-        placeholder: 'type anything...',
+        placeholder: 'type anything...'
     }
 ];
 

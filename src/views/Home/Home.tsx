@@ -5,13 +5,13 @@ import Ball from '../../Ball';
 import Cat from '../../components/Cat';
 import { ellipsis } from '../../emotion/mixins';
 
-import styled from 'react-emotion';
 import { withState } from 'recompose';
 
 import { H1, H2 } from '../../emotion/typography';
 import Select from '../../Select';
 
 import { IHomeStoreProps, STORE_HOME } from './homeStore';
+import styled from 'react-emotion';
 
 const Description = styled(H2)`
     composes: ${ellipsis};
@@ -43,18 +43,14 @@ class Home extends React.Component<IProps> {
                     onValueChange={this.props.setColor}
                     options={['red', 'violet', 'black', 'green']}
                 />
-                <H1>
-                    {this.props.homeStore.title}
-                </H1>
+                <H1>{this.props.homeStore.title}</H1>
                 <br />
-                <Description color="grey">
-                    There sits the only king I mean to bend my knee to: the King in the North!
-                </Description>
+                <Description>There sits the only king I mean to bend my knee to: the King in the North!</Description>
                 <br />
                 <Cat />
-                <Ball speed={'1'} />
-                {/*<Ball speed="4s" />*/}
-                {/*<Ball speed="3s" />*/}
+                <Ball speed="2s" />
+                <Ball speed="4s" />
+                <Ball speed="3s" />
             </div>
         );
     }

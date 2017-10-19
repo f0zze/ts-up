@@ -7,11 +7,11 @@ const Select = ({ value, onValueChange, options }) => {
 
     return (
         <select value={value} onChange={handleValueChange}>
-            {options.map(color =>
+            {options.map(color => (
                 <option key={color} value={color}>
                     {color}
                 </option>
-            )}
+            ))}
         </select>
     );
 };
