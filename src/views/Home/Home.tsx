@@ -5,7 +5,7 @@ import Ball from '../../Ball';
 import Cat from '../../components/Cat';
 import { ellipsis } from '../../emotion/mixins';
 
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { withState } from 'recompose';
 
 import { H1, H2 } from '../../emotion/typography';
