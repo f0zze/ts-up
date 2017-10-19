@@ -3,6 +3,7 @@
     "target": "es6",
     "sourceMap": true,
     "allowJs": true,
+    "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "experimentalDecorators": true,
     "moduleResolution": "node"

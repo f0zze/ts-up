@@ -52,9 +52,9 @@ class Home extends React.Component<IProps> {
                 </Description>
                 <br />
                 <Cat />
-                <Ball speed="2s" />
-                <Ball speed="4s" />
-                <Ball speed="3s" />
+                <Ball speed={'1'} />
+                {/*<Ball speed="4s" />*/}
+                {/*<Ball speed="3s" />*/}
             </div>
         );
     }
