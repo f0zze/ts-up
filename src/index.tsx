@@ -5,7 +5,6 @@ import { render } from 'react-dom';
 import RedBox from 'redbox-react';
 import { useStrict } from 'mobx';
 import { Provider } from 'mobx-react';
-import userProfiles from './json/users.json';
 
 import Main from './Main';
 
@@ -16,7 +15,7 @@ useStrict(true);
 
 import { HomeStore, STORE_HOME } from './views/Home/homeStore';
 import { AuthStore, IAuthStore } from './stores/AuthStore';
-import { UserListStore, IUserListStore } from './stores/UserListStore';
+import { UserListStore, IUserListStore } from './views/Profiles/ProfilesStore';
 
 export interface IAppStore {
     authStore: IAuthStore;
@@ -25,7 +24,7 @@ export interface IAppStore {
 
 const store: IAppStore = {
     [STORE_HOME]: new HomeStore(),
-    userListStore: UserListStore.create({ users: userProfiles }),
+    userListStore: UserListStore.create(),
     authStore: AuthStore.create({
         logged: {
             id: 1,

@@ -12,7 +12,7 @@ module.exports = env => {
     return {
         context: resolve('src'),
         entry: {
-            app: './index.tsx',
+            app: ['babel-polyfill', './index.tsx'],
             vendor: ['react-dom', 'react', 'emotion', 'recompose', 'lodash', 'react-router-dom']
         },
         output: {

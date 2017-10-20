@@ -2,8 +2,9 @@ import * as React from 'react';
 import { inject, observer } from 'mobx-react/custom';
 import { Col, Row } from 'react-flexbox-grid';
 import { IAppStore } from '../../index';
-import { IUserListStore } from '../../stores/UserListStore';
-import { IUserProfile } from '../../model/UserProfile';
+import { IUserListStore } from './ProfilesStore';
+import { IUserProfile } from './ProfileModel';
+import { H2 } from '../../emotion/typography';
 
 interface OwnProps {
     profiles?: IUserListStore;
@@ -14,6 +15,10 @@ interface OwnProps {
 }))
 @observer
 class Profiles extends React.Component<OwnProps> {
+    componentWillMount() {
+        this.props.profiles.loadProfiles();
+    }
+
     render() {
         return (
             <Row>
@@ -30,7 +35,7 @@ class Profiles extends React.Component<OwnProps> {
                 <div className="card">
                     {/*<img className="card-img-top" src="..." alt="Card image cap"/>*/}
                     <div className="card-block">
-                        <h4 className="card-title">{profile.name}</h4>
+                        <H2>{profile.name}</H2>
                         <p className="card-text">{profile.jobTitle}</p>
                         <a href="#" className="btn btn-primary">
                             Go somewhere
