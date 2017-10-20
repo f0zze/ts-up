@@ -40,7 +40,7 @@ module.exports = env => {
                 },
                 {
                     test: /\.css$/,
-                    include: [/src/, /flexboxgrid/, /bootstrap/],
+                    include: [/src/, /flexboxgrid/, /react-flexbox-grid/],
                     loader: ExtractTextPlugin.extract({
                         fallback: 'style-loader',
                         use: 'css-loader'

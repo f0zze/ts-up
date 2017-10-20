@@ -31,17 +31,10 @@ class Profiles extends React.Component<OwnProps> {
 
     private renderProfile = (profile: IUserProfile) => {
         return (
-            <Col md={3}>
-                <div>
-                    {/*<img className="card-img-top" src="..." alt="Card image cap"/>*/}
-                    <div>
-                        <H2>{profile.name}</H2>
-                        <p>{profile.jobTitle}</p>
-                        <a href="#">
-                            details
-                        </a>
-                    </div>
-                </div>
+            <Col md={3} sm={12}>
+                <H2>{profile.name}</H2>
+                <p>{profile.jobTitle}</p>
+                <a href="#">details</a>
             </Col>
         );
     };
