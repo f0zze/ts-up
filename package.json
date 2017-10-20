@@ -25,7 +25,6 @@
   "author": "Aigars Beinarovics,Arthur Pumpa",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "emotion": "^8.0.8",
     "lodash": "^4.17.4",
     "mobx": "^3.3.1",
