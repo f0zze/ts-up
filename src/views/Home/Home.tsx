@@ -12,6 +12,8 @@ import Select from '../../Select';
 
 import { IHomeStoreProps, STORE_HOME } from './homeStore';
 import styled from 'react-emotion';
+import Avatar from '../Avatar';
+import {Link} from 'react-router-dom';
 
 const Description = styled(H2)`
     composes: ${ellipsis};
@@ -32,6 +34,8 @@ class Home extends React.Component<IProps> {
     render() {
         return (
             <div>
+                <Avatar />
+                <Link to="/profiles">User profiles</Link>
                 <input
                     ref={titleInput => (this.titleInput = titleInput)}
                     onChange={this.changeTitle}

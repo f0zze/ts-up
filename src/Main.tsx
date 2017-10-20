@@ -8,11 +8,13 @@ import List from './views/List';
 import ItemDetails from './views/ItemDetails';
 import Recipe from './views/Recipe';
 import theme from './theme';
+import Profiles from './views/Profiles/Profiles';
 
 class Main extends React.Component {
     getRouter = () => (
         <Switch>
             <Route exact path="/" component={Home} />
+            <Route path="/profiles" component={Profiles} />
             <Route path="/list" component={List} />
             <Route path="/list/:id" component={ItemDetails} />
             <Route path="/form" component={Recipe} />

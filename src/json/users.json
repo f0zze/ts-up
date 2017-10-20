@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Aigars",
+    "img": "",
+    "jobTitle": "Senior software engineer"
+  },
+  {
+    "id": 2,
+    "name": "Juris",
+    "img": "",
+    "jobTitle": "Senior software engineer"
+  },
+  {
+    "id": 3,
+    "name": "Andrejs",
+    "img": "",
+    "jobTitle": "Senior software engineer"
+  },
+  {
+    "id": 4,
+    "name": "Arturs",
+    "img": "",
+    "jobTitle": "Senior software engineer"
+  },
+  {
+    "id": 5,
+    "name": "Konstantin",
+    "img": "",
+    "jobTitle": "Senior UI & UX expert"
+  }
+]

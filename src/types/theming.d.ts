@@ -9,5 +9,5 @@ declare module 'theming' {
     }
 
     export const withTheme: WithTheme;
-    export const ThemeProvider: StatelessComponent<{theme: any}>
+    export const ThemeProvider: StatelessComponent<{ theme: any }>;
 }
