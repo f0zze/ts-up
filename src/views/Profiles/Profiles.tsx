@@ -1,13 +1,12 @@
 import * as React from 'react';
-import {inject, observer} from 'mobx-react/custom';
-import {Col, Row} from 'react-flexbox-grid';
-import {IAppStore} from '../../index';
-import {IUserListStore} from '../../stores/UserListStore';
-import {IUserProfile} from '../../model/UserProfile';
-
+import { inject, observer } from 'mobx-react/custom';
+import { Col, Row } from 'react-flexbox-grid';
+import { IAppStore } from '../../index';
+import { IUserListStore } from '../../stores/UserListStore';
+import { IUserProfile } from '../../model/UserProfile';
 
 interface OwnProps {
-    profiles?: IUserListStore
+    profiles?: IUserListStore;
 }
 
 @inject((stores: IAppStore): Partial<OwnProps> => ({
@@ -33,13 +32,14 @@ class Profiles extends React.Component<OwnProps> {
                     <div className="card-block">
                         <h4 className="card-title">{profile.name}</h4>
                         <p className="card-text">{profile.jobTitle}</p>
-                        <a href="#" className="btn btn-primary">Go somewhere</a>
+                        <a href="#" className="btn btn-primary">
+                            Go somewhere
+                        </a>
                     </div>
                 </div>
             </Col>
-
-        )
-    }
+        );
+    };
 }
 
 export default Profiles;

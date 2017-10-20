@@ -13,7 +13,7 @@ import Select from '../../Select';
 import { IHomeStoreProps, STORE_HOME } from './homeStore';
 import styled from 'react-emotion';
 import Avatar from '../Avatar';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Description = styled(H2)`
     composes: ${ellipsis};

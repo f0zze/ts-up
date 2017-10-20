@@ -1,14 +1,14 @@
-const {resolve} = require('path');
+const { resolve } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const {getIfUtils, removeEmpty} = require('webpack-config-utils');
+const { getIfUtils, removeEmpty } = require('webpack-config-utils');
 
 module.exports = env => {
-    const {ifProd} = getIfUtils(env);
+    const { ifProd } = getIfUtils(env);
     return {
         context: resolve('src'),
         entry: {
@@ -63,12 +63,12 @@ module.exports = env => {
                         }
                     ]
                 },
-                {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, use: 'url-loader?limit=10000&mimetype=application/font-woff'},
-                {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, use: 'url-loader?limit=10000&mimetype=application/font-woff'},
-                {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, use: 'url-loader?limit=10000&mimetype=application/octet-stream'},
-                {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, use: 'file-loader'},
-                {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, use: 'url-loader?limit=10000&mimetype=image/svg+xml'},
-                {test: /\.(png|jpg|jpeg|gif)$/, use: 'file-loader'}
+                { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, use: 'url-loader?limit=10000&mimetype=application/font-woff' },
+                { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, use: 'url-loader?limit=10000&mimetype=application/font-woff' },
+                { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, use: 'url-loader?limit=10000&mimetype=application/octet-stream' },
+                { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, use: 'file-loader' },
+                { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, use: 'url-loader?limit=10000&mimetype=image/svg+xml' },
+                { test: /\.(png|jpg|jpeg|gif)$/, use: 'file-loader' }
             ]
         },
         plugins: removeEmpty([
