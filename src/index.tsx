@@ -14,21 +14,29 @@ useStrict(true);
 import { HomeStore, STORE_HOME } from './views/Home/homeStore';
 import { AuthStore, IAuthStore } from './stores/AuthStore';
 import { UserListStore, IUserListStore } from './views/Profiles/ProfilesStore';
+import HistoryStore from './DevTools/HistoryStore';
+import register from './DevTools/register';
 
 export interface IAppStore {
     authStore: IAuthStore;
     userListStore: IUserListStore;
+    historyStore: any;
 }
+
+export const historyStore = new HistoryStore();
+export const userListStore = UserListStore.create();
+export const authStore = AuthStore.create({
+    logged: {
+        id: 1,
+        name: 'Aigars'
+    }
+});
 
 const store: IAppStore = {
     [STORE_HOME]: new HomeStore(),
-    userListStore: UserListStore.create(),
-    authStore: AuthStore.create({
-        logged: {
-            id: 1,
-            name: 'Aigars'
-        }
-    })
+    historyStore,
+    userListStore,
+    authStore
 };
 
 const root = document.getElementById('app');
@@ -50,3 +58,5 @@ function MainContainer() {
         </Provider>
     );
 }
+
+register();

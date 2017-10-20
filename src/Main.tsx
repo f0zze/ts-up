@@ -1,5 +1,5 @@
 import * as React from 'react';
-import DevTools from 'mobx-react-devtools';
+// import DevTools from 'mobx-react-devtools';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'theming';
 
@@ -9,6 +9,7 @@ import ItemDetails from './views/ItemDetails';
 import Recipe from './views/Recipe';
 import theme from './theme';
 import Profiles from './views/Profiles/Profiles';
+import DevTools from './DevTools/DevTools';
 
 class Main extends React.Component {
     getRouter = () => (
