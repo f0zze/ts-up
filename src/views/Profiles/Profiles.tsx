@@ -2,16 +2,16 @@ import * as React from 'react';
 import { inject, observer } from 'mobx-react/custom';
 import { Col, Row } from 'react-flexbox-grid';
 import { IAppStore } from '../../index';
-import { IUserListStore } from './ProfilesStore';
+import { IProfileListStore } from './ProfilesStore';
 import { IUserProfile } from './ProfileModel';
 import { H2 } from '../../emotion/typography';
 
 interface OwnProps {
-    profiles?: IUserListStore;
+    profiles?: IProfileListStore;
 }
 
 @inject((stores: IAppStore): Partial<OwnProps> => ({
-    profiles: stores.userListStore
+    profiles: stores.profileListStore
 }))
 @observer
 class Profiles extends React.Component<OwnProps> {

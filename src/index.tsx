@@ -13,16 +13,16 @@ useStrict(true);
 
 import { HomeStore, STORE_HOME } from './views/Home/homeStore';
 import { AuthStore, IAuthStore } from './stores/AuthStore';
-import { UserListStore, IUserListStore } from './views/Profiles/ProfilesStore';
+import { ProfileListStore, IProfileListStore } from './views/Profiles/ProfilesStore';
 
 export interface IAppStore {
     authStore: IAuthStore;
-    userListStore: IUserListStore;
+    profileListStore: IProfileListStore;
 }
 
 const store: IAppStore = {
     [STORE_HOME]: new HomeStore(),
-    userListStore: UserListStore.create(),
+    profileListStore: ProfileListStore.create(),
     authStore: AuthStore.create({
         logged: {
             id: 1,
