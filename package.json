@@ -65,6 +65,7 @@
     "jest": "^21.0.2",
     "mobx-react-devtools": "^4.2.15",
     "npm": "^5.4.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.5.3",
     "progress-bar-webpack-plugin": "^1.10.0",
     "redbox-react": "^1.5.0",
@@ -81,5 +82,8 @@
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-config-utils": "^2.3.0",
     "webpack-dev-server": "^2.7.1"
-  }
+  },
+  "pre-commit": [
+    "format"
+  ]
 }
