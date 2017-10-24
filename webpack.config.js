@@ -13,7 +13,7 @@ module.exports = env => {
         context: resolve('src'),
         entry: {
             app: ['babel-polyfill', './index.tsx'],
-            vendor: ['react-dom', 'react', 'emotion', 'recompose', 'lodash', 'react-router-dom']
+            vendor: ['react-dom', 'react', 'emotion', 'recompose', 'react-router-dom', 'mobx', 'mobx-state-tree']
         },
         output: {
             path: resolve('app'),
@@ -82,9 +82,10 @@ module.exports = env => {
                 template: __dirname + '/src/index.html'
             }),
             new ExtractTextPlugin(ifProd('styles.[name].[chunkhash].css', 'styles.[name].css')),
+            // new BundleAnalyzerPlugin(),
             new webpack.DefinePlugin({
                 'process.env': {
-                    NODE_ENV: ifProd('"production"', '"development"')
+                    NODE_ENV: JSON.stringify(ifProd('production', 'development'))
                 }
             })
         ])
