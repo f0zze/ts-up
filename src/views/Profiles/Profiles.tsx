@@ -20,7 +20,6 @@ class Profiles extends React.Component<OwnProps> {
     }
 
     render() {
-        console.log('YOYO');
         return (
             <Row>
                 {this.props.profiles.users.map(profile => {
