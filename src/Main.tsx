@@ -11,8 +11,6 @@ if (ifProd()) {
     DevTool = require('mobx-react-devtools').default;
 }
 import Home from './views/Home';
-import List from './views/List';
-import ItemDetails from './views/ItemDetails';
 import theme from './theme';
 import AppLayout from './components/layout/AppLayout';
 
@@ -26,8 +24,6 @@ class Main extends React.Component {
         <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/profiles" component={Profile} />
-            <Route path="/list" component={List} />
-            <Route path="/list/:id" component={ItemDetails} />
         </Switch>
     );
 
