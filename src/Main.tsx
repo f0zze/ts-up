@@ -13,8 +13,8 @@ if (ifProd()) {
 import Home from './views/Home';
 import List from './views/List';
 import ItemDetails from './views/ItemDetails';
-import Recipe from './views/Recipe';
 import theme from './theme';
+import AppLayout from './components/layout/AppLayout';
 
 const Profile = Loadable({
     loader: () => import('./views/Profiles'),
@@ -28,7 +28,6 @@ class Main extends React.Component {
             <Route path="/profiles" component={Profile} />
             <Route path="/list" component={List} />
             <Route path="/list/:id" component={ItemDetails} />
-            <Route path="/form" component={Recipe} />
         </Switch>
     );
 
@@ -41,7 +40,9 @@ class Main extends React.Component {
             <div>
                 {this.getMobxDevTools()}
                 <ThemeProvider theme={theme}>
-                    <BrowserRouter>{this.getRouter()}</BrowserRouter>
+                    <BrowserRouter>
+                        <AppLayout>{this.getRouter()}</AppLayout>
+                    </BrowserRouter>
                 </ThemeProvider>
             </div>
         );

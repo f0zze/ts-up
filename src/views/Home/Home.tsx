@@ -34,6 +34,11 @@ class Home extends React.Component<IProps> {
     render() {
         return (
             <div>
+                <div>
+                    <Ball speed="2s" />
+                    <Ball speed="4s" />
+                    <Ball speed="3s" />
+                </div>
                 <Avatar />
                 <Link to="/profiles">User profiles</Link>
                 <input
@@ -52,9 +57,6 @@ class Home extends React.Component<IProps> {
                 <Description>There sits the only king I mean to bend my knee to: the King in the North!</Description>
                 <br />
                 <Cat />
-                <Ball speed="2s" />
-                <Ball speed="4s" />
-                <Ball speed="3s" />
             </div>
         );
     }
